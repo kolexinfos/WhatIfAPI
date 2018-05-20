@@ -196,10 +196,10 @@
       <DependentUpon>201805202025588_AddCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\CategoryModel.cs" />
-    <Compile Include="Models\CompanyModel.cs" />
-    <Compile Include="Models\InquisitionModel.cs" />
-    <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Inquisition.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />

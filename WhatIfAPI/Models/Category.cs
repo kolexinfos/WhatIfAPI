@@ -5,7 +5,7 @@ using System.Web;
 
 namespace VanHackAPI.Models
 {
-    public class CategoryModel
+    public class Category
     {
     }
 }

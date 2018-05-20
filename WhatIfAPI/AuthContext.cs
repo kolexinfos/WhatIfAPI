@@ -17,7 +17,7 @@ namespace VanHackAPI
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AuthContext, VanHackAPI.Migrations.Configuration>());
         }
 
-        public DbSet<CompanyModel> companys { get; set; }
+        public DbSet<Company> companys { get; set; }
         //public DbSet<>
        
 

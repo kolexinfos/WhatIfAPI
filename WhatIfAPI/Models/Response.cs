@@ -5,7 +5,7 @@ using System.Web;
 
 namespace VanHackAPI.Models
 {
-    public class InquisitionModel
+    public class Response
     {
     }
 }

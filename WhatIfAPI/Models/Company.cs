@@ -7,9 +7,9 @@ using System.Web;
 
 namespace VanHackAPI.Models
 {
-    public class CompanyModel
+    public class Company
     {
-        [Key]
+       
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
         public string Address { get; set; }
