@@ -13,6 +13,16 @@ namespace VanHackAPI.Models
         public string UserName { get; set; }
 
         [Required]
+        [Display(Name = "Email Address")]
+        public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Mobile Number")]
+        public string Mobile { get; set; }
+
+
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

@@ -14,7 +14,15 @@ namespace VanHackAPI
         public AuthContext()
             : base("AuthContext")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AuthContext, VanHackAPI.Migrations.Configuration>());
+        }
 
+        public DbSet<CompanyModel> companys { get; set; }
+       
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
