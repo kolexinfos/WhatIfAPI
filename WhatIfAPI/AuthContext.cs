@@ -9,7 +9,7 @@ using VanHackAPI.Models;
 
 namespace VanHackAPI
 {
-    public class AuthContext : IdentityDbContext<IdentityUser>
+    public class AuthContext : IdentityDbContext<UserModel>
     {
         public AuthContext()
             : base("AuthContext")
@@ -18,6 +18,7 @@ namespace VanHackAPI
         }
 
         public DbSet<CompanyModel> companys { get; set; }
+        //public DbSet<>
        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

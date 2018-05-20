@@ -23,19 +23,24 @@ namespace VanHackAPI
 
         public async Task<IdentityResult> RegisterUser(UserModel userModel)
         {
-            IdentityUser user = new IdentityUser
+            UserModel user = new UserModel
             {
-                UserName = userModel.UserName
+                UserName = userModel.UserName,
+                FirstName = userModel.FirstName,
+                LastName = userModel.LastName,
+                Password = userModel.Password
             };
 
-            var result = await _userManager.CreateAsync(user, userModel.Password);
+            string passwordHash = _userManager.PasswordHasher.HashPassword(userModel.Password);
+            var result = await _userManager.CreateAsync(user, passwordHash);
 
             return result;
         }
 
         public async Task<IdentityUser> FindUser(string userName, string password)
         {
-            IdentityUser user = await _userManager.FindAsync(userName, password);
+            string passwordHash = _userManager.PasswordHasher.HashPassword(password);
+            IdentityUser user = await _userManager.FindAsync(userName, passwordHash);
 
             return user;
         }

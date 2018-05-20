@@ -171,7 +171,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -181,8 +183,23 @@
     <Compile Include="AuthContext.cs" />
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Migrations\201805201347454_Init.cs" />
+    <Compile Include="Migrations\201805201347454_Init.Designer.cs">
+      <DependentUpon>201805201347454_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805202004028_MyNewMigrationName.cs" />
+    <Compile Include="Migrations\201805202004028_MyNewMigrationName.Designer.cs">
+      <DependentUpon>201805202004028_MyNewMigrationName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805202025588_AddCompany.cs" />
+    <Compile Include="Migrations\201805202025588_AddCompany.Designer.cs">
+      <DependentUpon>201805202025588_AddCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
+    <Compile Include="Models\InquisitionModel.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
@@ -212,6 +229,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805201347454_Init.resx">
+      <DependentUpon>201805201347454_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805202004028_MyNewMigrationName.resx">
+      <DependentUpon>201805202004028_MyNewMigrationName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805202025588_AddCompany.resx">
+      <DependentUpon>201805202025588_AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
